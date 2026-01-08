@@ -4,7 +4,7 @@ import socketserver
 # 서버 포트 설정 (기본 8000)
 PORT = 8000
 
-# 교수님께 보여줄 간단한 HTML 페이지 내용
+#  HTML 페이지 내용
 html_content = """
 <!DOCTYPE html>
 <html lang="ko">
@@ -42,4 +42,5 @@ with socketserver.TCPServer(("", PORT), Handler) as httpd:
     print(f"✅ 서버가 성공적으로 시작되었습니다!")
     print(f"🌐 브라우저에서 http://localhost:{PORT} 를 입력하여 확인하세요.")
     print("종료하려면 Ctrl+C를 누르세요.")
+
     httpd.serve_forever()
